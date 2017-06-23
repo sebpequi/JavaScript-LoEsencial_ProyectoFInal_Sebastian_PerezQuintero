@@ -6,7 +6,7 @@
 <meta name="author" content="Sebastian Pérez Quintero">
 <meta name="keywords" content="estudiantes NextU, JavaScript, JSON">
 <meta name="description" content="Lista estudiantes materia JS de NEXTU">
-<link type="text/css" rel="stylesheet" href="css/estilos.css">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Quicksand" rel="stylesheet"><link type="text/css" rel="stylesheet" href="css/estilos.css">
 <script src="js.javascript.js"></script>
 <title>Evaluación Final - JS lo esencial</title>
 </head>
@@ -14,19 +14,29 @@
 <body>
 	<div id="caja_sitio">
         <header>
-            <h1>Lista de los Estudiantes de NextU del curso JS</h1>
+        	<div id="logo_titulo">
+            	<div id="logo">
+                	<svg>
+						<image xlink:href="imagenes/logou.svg" width="100%" ></image>
+					</svg>
+                </div>
+                <div id="titulopage">
+                    <h1>Lista de los Estudiantes de NextU del curso JS</h1>
+                </div>
+            </div>
             <nav>
-                <ul>
+                <ul id="menu_comandos">
                     <li>Mostrar Lista</li>
                     <li>Calcular Promedio</li>
-                    <li>El mejor Estudiante</li>
-                    <li>¿Quién necesita un poco más de esfuerzo?</li>
+                    <li>El mejor</li>
+                    <li>Necesita más Esfuerzo</li>
                 </ul>
             </nav>
         </header>
         <div id="contenido">
             <section id="mensajes">
-            
+                <p id="elmejorestudiante">Queremos felicitar a: <br><span id="nombre_mejor">Sebastian</span><br> Por su dedicación en la certificación </p>
+                <p id="masesfuerzo"><span id="nombre_malo">Sebastian</span><br>Es importante realizar un esfuerzo mayor ¡Animo!</p>
             </section>
             <div id="contenedor_tablas">
                 <section id="tablaestudiantes">
@@ -41,7 +51,24 @@
                             <th>Nota 5</th>
                         </thead>
                         <tbody id="content_mlest">
-                            
+                            <tr>
+                            	<td>dato</td>
+                            	<td>Sebastian</td>
+                            	<td>dato</td>
+                            	<td>dato</td>
+                            	<td>dato</td>
+                            	<td>dato</td>
+                            	<td>dato</td>
+                            </tr>
+                            <tr>
+                            	<td>dato</td>
+                            	<td>Sebastian</td>
+                            	<td>dato</td>
+                            	<td>dato</td>
+                            	<td>dato</td>
+                            	<td>dato</td>
+                            	<td>dato</td>
+                            </tr>
                         </tbody>
                     </table>
                 </section>
@@ -52,15 +79,18 @@
                             <th>Promedio</th>
                         </thead>
                         <tbody id="content_mlp">
-                            
+                            <tr>
+                            	<td>Sebastian</td>
+                            	<td>dato</td>
+                            </tr>
                         </tbody>
                     </table>
                 </section>
             </div>
         </div>
-        <footer>
-            <span>Design by Sebastian Pérez Quintero - Todos los Derechos Reservados &copy;</span>
-        </footer>
     </div>
+    <footer>
+        <span>Design by Sebastian Pérez Quintero - CopyRight&copy;</span>
+    </footer>
 </body>
 </html>
