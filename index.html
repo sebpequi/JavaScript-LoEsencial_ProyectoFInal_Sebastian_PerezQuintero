@@ -35,12 +35,15 @@
         </header>
         <div id="contenido">
             <div id="contenedor_tablas">
+           	 	<p id="anuncio_tabla"><strong>Navegando en mis notas...</strong><br>Arrastrar la tabla a los lados para ver todos los datos</p>
                 <section id="tablaestudiantes">
                     <table id="mlest">
                         <thead>
                             <th>Código</th>
                             <th>Nombre</th>
                             <th>Nota 1</th>
+                            <th>Nota 2</th>
+                            <th>Prom</th>
                         </thead>
                         <tbody id="content_mlest">
                         </tbody>
@@ -49,6 +52,7 @@
                 <section id="promedio">
                 	<h2>Información de interes</h2>
 					<p>El promedio de nota entre los estudiantes es de: <span id="elpromedio"></span></p>
+                	<h3>Progresos...</h3>
                     <div id="mensajes">
                     	<ul id="mensajes_aliento">
                             <li onClick="elmejor(estudiantes)">El mejor</li>
@@ -56,6 +60,24 @@
                         </ul>
                         <p id="elmejorestudiante">Queremos felicitar a: <br><span id="nombre_mejor"></span><br> Por su dedicación en la certificación </p>
                         <p id="masesfuerzo"><span id="nombre_malo"></span><span id="otro_nombremalo"></span><br>Es importante realizar un esfuerzo mayor <strong>¡Animo!</strong></p>
+                    </div>
+                    <!-- Area de los que van GANANDO y los que van PERDIENDO -->
+                    <div id="lasnoticias">
+                        <p>Realiza clic en los botones <strong>GANANDO</strong> y <strong>PERDIENDO</strong> para ver quiénes van Ganando la certificación y quienes estan en la cuerda floja...</p>
+                        <div id="ganadoresyperdedores">
+                            <div id="ganadores">
+                                <h4 onClick="lavanGanando(estudiantes)">GANANDO</h4>
+                                <ul id="losganadores">
+                                
+                                </ul>
+                            </div> 
+                            <div id="perdedores">    
+                                <h4 onClick="lavanPerdiendo(estudiantes)">PERDIENDO</h4>
+                                <ul id="losperdedores">
+    
+                                </ul>
+                            </div>    
+                        </div>
                     </div>
                 </section>
             </div>
