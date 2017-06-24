@@ -13,17 +13,20 @@ del sitio web, como por ejemplo los clics para mostrar menu y el efecto de onloa
 	//Declaramos el evento de click para mostrar y ocultar el menu		
 	var uno = document.getElementById("mostrar_menu");
 	    dos = document.getElementById("menu_comandos");
-	    flag = true;	
+		ordentexto = document.getElementById("vermenu");
+	    y = true;	
 	uno.onclick = function() {
-		if(flag){ 
+		if(y){ 
 			dos.style.display = "flex";
 			dos.style.animation = "entradacaja 1.5s linear";
 			dos.style.marginTop ="0";
-			flag = !flag;
+			y = !y;
+			document.getElementById("vermenu").innerHTML = "Ocultar";
 		} else {
 			dos.style.marginTop = "-80%";
 			dos.style.animation = "salidacaja 1s linear";
-			flag = !flag;
+			y = !y;
+			document.getElementById("vermenu").innerHTML = "Mostrar";			
 		}
 	}
 
@@ -36,9 +39,9 @@ var estudiantes = [
 	{"codigo":"003", "nombre":"Daniela", "nota1":4.5},
 	{"codigo":"004", "nombre":"Sara", "nota1":3.9},
 	{"codigo":"005", "nombre":"Juliana", "nota1":4.8},
-	{"codigo":"006", "nombre":"Vanessa", "nota1":3.9},
+	{"codigo":"006", "nombre":"Vanessa", "nota1":3.7},
 	{"codigo":"007", "nombre":"Daniel", "nota1":4.8},
-	{"codigo":"008", "nombre":"Sebas", "nota1":3.0},
+	{"codigo":"008", "nombre":"Sebas", "nota1":4.0},
 	{"codigo":"009", "nombre":"Isamar", "nota1":4.5},
 	{"codigo":"010", "nombre":"Esmeralda", "nota1":4.5}
 ]
@@ -62,7 +65,7 @@ var estudiantes = [
 		for (e = 0; e < json.length; e++) {
 			suma += json[e].nota1;
 			promedio = suma/10;
-			document.getElementById("elpromedio").innerHTML = promedio.toFixed(2);
+			document.getElementById("elpromedio").innerHTML = promedio.toFixed(1);
 			
 		}			
 	}
@@ -79,7 +82,7 @@ var estudiantes = [
 				index=c;
 				
 			}
-			document.getElementById("nombre_mejor").innerHTML = json[index].nombre+" con una nota de "+mejornota;
+			document.getElementById("nombre_mejor").innerHTML = json[index].nombre+" que logro una nota de "+mejornota;
 			document.getElementById("elmejorestudiante").style.display = "block";			
 			document.getElementById("masesfuerzo").style.display = "none";
 			
@@ -100,11 +103,9 @@ var estudiantes = [
 			}
 			document.getElementById("nombre_malo").innerHTML = json[elpeorest].nombre;
 			document.getElementById("elmejorestudiante").style.display = "none";
-			document.getElementById("masesfuerzo").style.display = "block";
-					
-			
-			
+			document.getElementById("masesfuerzo").style.display = "block";			
 		}
+	
 	}
 
 

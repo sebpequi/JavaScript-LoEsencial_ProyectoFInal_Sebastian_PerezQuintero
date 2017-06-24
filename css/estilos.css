@@ -7,10 +7,6 @@ body {
 	padding:0;
 }
 
-#entrada {
-	
-}
-
 a, ul {
 	text-decoration:none;
 	list-style:none;
@@ -21,7 +17,8 @@ table, th, tr, td {
 }
 
 #caja_sitio {
-	background-color:white;	
+	background-color:white;
+	min-height:500px;
 }
 
 /*** Animación Caja Sitio ***/
@@ -55,17 +52,9 @@ table, th, tr, td {
 	margin: 0 auto 10px auto;
 }
 
-#logo {
-
-}
-
 #logo svg {
 	width:100%;
 	height:60px;
-}
-
-#titulopage {
-
 }
 
 #titulopage h1 {
@@ -77,32 +66,6 @@ table, th, tr, td {
 
 /*** El Menu se diseño en los media queries ***/
 #mostrar_menu {
-	display:none;	
-}
-
-/*** Area de los Mensajes ***/
-#mensajes {
-	font-size:20px;
-	text-align:center;
-	font-family: 'Dancing Script', cursive;
-}
-#nombre_mejor, #nombre_malo {
-	font-size:18px;
-	font-family: 'Quicksand', sans-serif;	
-	font-weight:900;
-}
-
-/*** Mostrar los mensajes de buen estudiante y estudiante regular ***/
-#mensajes {
-	width:95%;
-	padding:10px 2.5% 10px 2.5%;
-}
-
-#elmejorestudiante {
-	display:none;	
-}
-
-#masesfuerzo {
 	display:none;	
 }
 
@@ -155,10 +118,6 @@ table, th, tr, td {
 	font-size:13px;	
 }
 
-#content_mlest {
-
-}
-
 #mlest #content_mlest tr td {
 	padding:10px 10px 5px 10px;
 	text-align:center;
@@ -180,50 +139,70 @@ table, th, tr, td {
 }
 
 /*** Tabla del promedio ***/
-#tablapromedio {
-	width:30%;
+#promedio {
+	background:#f2f2f2;
 }
 
-#mlp thead th {
-	padding:10px 10px 5px 10px;
+#promedio h2 {
 	text-align:center;
+	color:#113048;	
+	margin:0;
+	padding:0;
 }
 
-#mlp thead th:first-child {
-	vertical-align:bottom;
-	background:none;	
+#elpromedio {
+	font-weight:900;	
 }
 
-#mlp thead th:nth-child(2) {
-	vertical-align:bottom;	
-	background:none;
+/*** Area de los Mensajes ***/
+#mensajes {
+	width:100%;
 }
 
-#mlp thead th:first-child {	
-	background:#21334d;
-	border-radius:10px 10px 0 0;
-	color:white;
-}
-#mlp thead th:nth-child(2) {	
-	background:#ff7200;
-	border-radius:10px 10px 0 0;
-	color:white;
+#mensajes_aliento {
+	display:flex;
+	flex-direction:row;	
+	padding:0;
+	margin:0;
 }
 
-#content_mlp {
-
-}
-
-#mlp #content_mlp tr td {
-	padding:10px 10px 5px 10px;
+#mensajes_aliento li {
+	padding:10px 0 10px 0;
 	text-align:center;
+	background:#253458;
+	border-radius:15px;
+	font-size:0.8rem;
+	color:white;
+	cursor:pointer;
 }
 
-#mlp #content_mlp tr td:first-child {	
-	background:rgba(33, 51, 77, 0.3);
+#mensajes_aliento li:first-child {
+	width:33%;	
+	margin-right:2%;
 }
-#mlp #content_mlp tr td:nth-child(2) {	
-	background:rgba(255, 114, 0, 0.3);
+
+#mensajes_aliento li:last-child {
+	width:65%;
+}
+
+#mensajes p {
+	font-size:20px;
+	text-align:center;
+	font-family: 'Dancing Script', cursive;
+}
+#nombre_mejor, #nombre_malo {
+	font-size:18px;
+	font-family: 'Quicksand', sans-serif;	
+	font-weight:900;
+}
+
+/*** Mostrar los mensajes de buen estudiante y estudiante regular ***/
+#elmejorestudiante {
+	display:none;	
+}
+
+#masesfuerzo {
+	display:none;	
 }
 
 
@@ -276,7 +255,6 @@ nav #menu_comandos {
 
 
 nav #menu_comandos li {
-	padding:10px 15px 10px 15px;
 	margin-top:10px;
 	border: solid 1px #f2f2f2;
 	border-radius:10px;
@@ -290,31 +268,15 @@ nav #menu_comandos li {
 	background: linear-gradient(top, #0045A6 , #03275A);	
 }
 
+nav #menu_comandos li a {
+	width:auto;
+	color:white;
+	display:block;	
+	padding:10px 15px 10px 15px;			
+}
+
 nav #menu_comandos li:first-child {
 	margin-right:10px;	
-}
-
-nav #menu_comandos li:nth-child(2) {
-	margin-right:10px;	
-}
-
-nav #menu_comandos li:nth-child(3) {
-	color: brown;
-	background: -webkit-linear-gradient(top, #D7C200 , #B7A92A);
-	background: -o-linear-gradient(top, #D7C200 , #B7A92A);
-	background: -moz-linear-gradient(top, #D7C200 , #B7A92A);
-	background: linear-gradient(top, #D7C200 , #B7A92A);	
-}
-
-nav #menu_comandos li:last-child {
-	margin-left:10px;
-	color:black;	
-	
-	background: -webkit-linear-gradient(top, #DFDFDF , #A0A0A0);
-	background: -o-linear-gradient(top, #DFDFDF , #A0A0A0);
-	background: -moz-linear-gradient(top, #DFDFDF , #A0A0A0);
-	background: linear-gradient(top, #DFDFDF , #A0A0A0);	
-	
 }
 
 /*** Las tablas de los datos ***/
@@ -325,12 +287,14 @@ nav #menu_comandos li:last-child {
 
 /*** Tabla lista de los estudiantes ***/
 #tablaestudiantes {
-	width:70%;
+	width:40%;
 }
 
 /*** Tabla del promedio ***/
-#tablapromedio {
-	width:30%;
+#promedio {
+	width:50%;
+	min-height:350px;
+	padding:20px 5% 20px 5%;
 }
 
 }
@@ -357,7 +321,9 @@ nav #menu_comandos li:last-child {
 }
 
 #titulopage {
-	width:100%;
+	width:90%;
+	padding:0 5% 0 5%;
+	font-size:0.7rem;
 }
 
 /*** Menu ***/
@@ -395,7 +361,6 @@ nav {
 
 
 nav #menu_comandos li {
-	padding:15px 15px 15px 15px;
 	border: solid 1px #f2f2f2;
 	color: white;
 	cursor:pointer;
@@ -406,6 +371,13 @@ nav #menu_comandos li {
 	background: -moz-linear-gradient(top, #0045A6 , #03275A);
 	background: linear-gradient(top, #0045A6 , #03275A);
 	opacity:0.5;	
+}
+
+nav #menu_comandos li a {
+	width:auto;
+	padding:15px 15px 15px 15px;
+	color:white;
+	display:block;	
 }
 
 nav #menu_comandos li:first-child {
@@ -422,23 +394,22 @@ nav #menu_comandos li:last-child {
 }
 
 /*** Tabla lista de los estudiantes ***/
-#anuncio_tabla {
-	display:block;	
-}
 #tablaestudiantes {
 	width:100%;
 	margin-bottom:15px;
 	overflow-x:auto;
 }
 
-/*** Tabla del promedio ***/
-#tablapromedio {
-	width:100%;
-}
-
-#mlp {
+#mlest {
 	margin:0 auto 0 auto;	
 }
+
+/*** Tabla del promedio ***/
+#promedio {
+	width:90%;
+	padding:5%;
+}
+
 
 }
 

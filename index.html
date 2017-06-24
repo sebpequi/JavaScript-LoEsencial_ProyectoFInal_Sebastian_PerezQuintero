@@ -25,23 +25,16 @@
                     <h1>Lista de los Estudiantes de NextU del curso JS</h1>
                 </div>
             </div>
-           	<span id="mostrar_menu">Clic para Mostrar Menu</span>            
+           	<span id="mostrar_menu">Clic para <span id="vermenu">Mostrar</span> Menu</span>            
             <nav>
                 <ul id="menu_comandos">
-                    <li onClick="mostrar_Lista(estudiantes)">Mostrar Lista</li>
-                    <li onClick="mostrar_promedio(estudiantes)">Calcular Promedio</li>
-                    <li onClick="elmejor(estudiantes)">El mejor</li>
-                    <li onClick="masesfuerzo(estudiantes)">Necesita más Esfuerzo</li>
+                    <li onClick="mostrar_Lista(estudiantes)"><a>Mostrar Lista</a></li>
+                    <li onClick="mostrar_promedio(estudiantes)"><a href="#promedio">Calcular Promedio</a></li>
                 </ul>
             </nav>
         </header>
         <div id="contenido">
-            <section id="mensajes">
-                <p id="elmejorestudiante">Queremos felicitar a: <br><span id="nombre_mejor"></span><br> Por su dedicación en la certificación </p>
-                <p id="masesfuerzo"><span id="nombre_malo"></span><br>Es importante realizar un esfuerzo mayor ¡Animo!</p>
-            </section>
             <div id="contenedor_tablas">
-            	<p id="anuncio_tabla">Arrastrar la tabla a los lados para ver todos los datos</p>
                 <section id="tablaestudiantes">
                     <table id="mlest">
                         <thead>
@@ -54,7 +47,16 @@
                     </table>
                 </section>
                 <section id="promedio">
-					<p>El promedio de notas es: <span id="elpromedio"></span></p>
+                	<h2>Información de interes</h2>
+					<p>El promedio de nota entre los estudiantes es de: <span id="elpromedio"></span></p>
+                    <div id="mensajes">
+                    	<ul id="mensajes_aliento">
+                            <li onClick="elmejor(estudiantes)">El mejor</li>
+                            <li onClick="masesfuerzo(estudiantes)">Necesita más Esfuerzo</li>
+                        </ul>
+                        <p id="elmejorestudiante">Queremos felicitar a: <br><span id="nombre_mejor"></span><br> Por su dedicación en la certificación </p>
+                        <p id="masesfuerzo"><span id="nombre_malo"></span><span id="otro_nombremalo"></span><br>Es importante realizar un esfuerzo mayor <strong>¡Animo!</strong></p>
+                    </div>
                 </section>
             </div>
         </div>
